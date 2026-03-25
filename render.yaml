@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: multi-agent-api
+    runtime: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: DATABASE_URL
+        value: sqlite:///./local.db
+      - key: PYTHON_VERSION
+        value: 3.11.0

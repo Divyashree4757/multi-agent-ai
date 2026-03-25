@@ -1,0 +1,11 @@
+sqlalchemy
+python-dotenv
+groq
+fastapi
+uvicorn
+httpx
+pydantic
+requests
+python-multipart
+jinja2
+aiofiles
