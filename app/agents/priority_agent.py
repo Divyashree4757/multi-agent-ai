@@ -16,7 +16,7 @@ def rank_tasks_by_priority() -> dict:
         return {"ranked_tasks": [], "message": "No pending tasks to rank!"}
 
     response = client.chat.completions.create(
-        model="llama3-8b-8192",
+        model="llama-3.1-8b-instant",
         messages=[
             {
                 "role": "system",

@@ -15,7 +15,7 @@ def predict_day() -> dict:
     pending = [t for t in tasks if not t["done"]]
 
     response = client.chat.completions.create(
-        model="llama3-8b-8192",
+        model="llama-3.1-8b-instant",
         messages=[
             {
                 "role": "system",

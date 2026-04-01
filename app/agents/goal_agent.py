@@ -12,7 +12,7 @@ def coach_user(goal: str) -> dict:
     memory = get_memory_context()
 
     response = client.chat.completions.create(
-        model="llama3-8b-8192",
+        model="llama-3.1-8b-instant",
         messages=[
             {
                 "role": "system",
@@ -60,7 +60,7 @@ Respond ONLY in this JSON format:
 
 def brainstorm(topic: str) -> dict:
     response = client.chat.completions.create(
-        model="llama3-8b-8192",
+        model="llama-3.1-8b-instant",
         messages=[
             {
                 "role": "system",

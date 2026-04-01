@@ -14,7 +14,7 @@ def check_risks() -> dict:
     pending = [t for t in tasks if not t["done"]]
 
     response = client.chat.completions.create(
-        model="llama3-8b-8192",
+        model="llama-3.1-8b-instant",
         messages=[
             {
                 "role": "system",
@@ -67,7 +67,7 @@ def generate_daily_report() -> dict:
     pending = [t for t in tasks if not t["done"]]
 
     response = client.chat.completions.create(
-        model="llama3-8b-8192",
+        model="llama-3.1-8b-instant",
         messages=[
             {
                 "role": "system",
