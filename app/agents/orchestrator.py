@@ -11,7 +11,7 @@ client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 def analyze_intent(user_message: str) -> dict:
     response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model="llama3-8b-8192",
         messages=[
             {
                 "role": "system",
@@ -97,7 +97,7 @@ def handle_multi_intent(user_message: str, primary: str, secondary: str) -> str:
 
 def handle_low_confidence(user_message: str) -> str:
     response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model="llama3-8b-8192",
         messages=[
             {
                 "role": "system",
@@ -163,7 +163,7 @@ def orchestrate(user_message: str) -> dict:
     else:
         # Step 5 — Handle general conversation
         response = client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
+            model="llama3-8b-8192",
             messages=[
                 {
                     "role": "system",

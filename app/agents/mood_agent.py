@@ -21,7 +21,7 @@ def detect_mood() -> dict:
         }
 
     response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model="llama3-8b-8192",
         messages=[
             {
                 "role": "system",

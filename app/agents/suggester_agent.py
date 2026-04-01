@@ -17,7 +17,7 @@ def auto_suggest_tasks() -> dict:
     pending_tasks = [t for t in tasks if not t["done"]]
 
     response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model="llama3-8b-8192",
         messages=[
             {
                 "role": "system",
